@@ -1,0 +1,201 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "store": {
+        "type": "string",
+        "description": "Store domain"
+      },
+      "platform": {
+        "type": "string",
+        "description": "shopify or woocommerce"
+      },
+      "productId": {
+        "type": "integer",
+        "description": "Product ID in the store"
+      },
+      "title": {
+        "type": "string",
+        "description": "Product title"
+      },
+      "handle": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "URL handle / slug"
+      },
+      "url": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "Product page URL"
+      },
+      "vendor": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "Vendor or brand"
+      },
+      "productType": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "Shopify product type or WooCommerce product type"
+      },
+      "categories": {
+        "type": "array",
+        "description": "WooCommerce categories"
+      },
+      "tags": {
+        "type": "array",
+        "description": "Tags"
+      },
+      "price": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "description": "Lowest current price"
+      },
+      "maxPrice": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "description": "Highest current price"
+      },
+      "compareAtPrice": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "description": "Original price when on sale"
+      },
+      "currency": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "ISO currency code"
+      },
+      "onSale": {
+        "type": "boolean",
+        "description": "Discounted"
+      },
+      "available": {
+        "type": [
+          "boolean",
+          "null"
+        ],
+        "description": "In stock"
+      },
+      "variantCount": {
+        "type": "integer",
+        "description": "Number of variants"
+      },
+      "skus": {
+        "type": "array",
+        "description": "SKUs"
+      },
+      "options": {
+        "type": "array",
+        "description": "Option names and values"
+      },
+      "imageUrl": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "Main image"
+      },
+      "images": {
+        "type": "array",
+        "description": "All image URLs"
+      },
+      "description": {
+        "type": "string",
+        "description": "Plain-text description"
+      },
+      "averageRating": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "description": "WooCommerce average rating"
+      },
+      "reviewCount": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "description": "WooCommerce review count"
+      },
+      "createdAt": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "Created (Shopify)"
+      },
+      "updatedAt": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "Updated (Shopify)"
+      },
+      "publishedAt": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "Published (Shopify)"
+      },
+      "variants": {
+        "type": "array",
+        "description": "Variants"
+      }
+    },
+    "additionalProperties": true
+  },
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": [
+          "imageUrl",
+          "store",
+          "platform",
+          "title",
+          "vendor",
+          "price",
+          "compareAtPrice",
+          "currency",
+          "onSale",
+          "available",
+          "variantCount",
+          "url"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "imageUrl": {
+            "label": "Image",
+            "format": "image"
+          },
+          "url": {
+            "label": "URL",
+            "format": "link"
+          }
+        }
+      }
+    }
+  }
+}

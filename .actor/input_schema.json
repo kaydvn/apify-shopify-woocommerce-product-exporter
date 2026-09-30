@@ -1,0 +1,18 @@
+{
+    "title": "Shopify & WooCommerce Product Exporter",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "stores": { "title": "Store URLs or domains", "type": "array", "editor": "stringList", "description": "Shopify or WooCommerce stores, e.g. allbirds.com or https://shop.example.com. The platform is detected automatically.", "prefill": ["allbirds.com"] },
+        "maxProductsPerStore": { "title": "Max products per store", "type": "integer", "editor": "number", "minimum": 1, "description": "Stop after this many products per store. Leave empty for the full catalog.", "prefill": 100 },
+        "includeVariants": { "title": "Include variants", "type": "boolean", "default": true, "description": "Add the list of variants (SKU, barcode, price, stock, options) to each product." },
+        "onlyAvailable": { "title": "Only in-stock products", "type": "boolean", "default": false, "description": "Skip products that are sold out. Skipped products are not charged." },
+        "onlyOnSale": { "title": "Only products on sale", "type": "boolean", "default": false, "description": "Keep only products with a compare-at / regular price above the current price." },
+        "keyword": { "title": "Keyword filter", "type": "string", "editor": "textfield", "description": "Keep only products whose title, vendor, type, tags or categories contain this text (case-insensitive)." },
+        "descriptionMaxLength": { "title": "Max description length", "type": "integer", "editor": "number", "minimum": 0, "default": 0, "description": "Truncate the plain-text description to this many characters. 0 keeps the full text." },
+        "respectRobots": { "title": "Respect robots.txt", "type": "boolean", "default": true, "description": "Skip product feeds that the store's robots.txt disallows." },
+        "concurrency": { "title": "Stores in parallel", "type": "integer", "editor": "number", "minimum": 1, "maximum": 20, "default": 5, "description": "How many stores to process at the same time. Pages within a store are fetched one by one." },
+        "timeoutSecs": { "title": "Request timeout (seconds)", "type": "integer", "editor": "number", "minimum": 5, "maximum": 120, "default": 30, "description": "Timeout for each HTTP request." }
+    },
+    "required": ["stores"]
+}

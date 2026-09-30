@@ -1,0 +1,15 @@
+{
+  "name": "store-product-exporter",
+  "version": "1.0.0",
+  "description": "Export every product from Shopify and WooCommerce stores through their public product feeds. HTTP-only.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node --test test/*.test.js"
+  },
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "apify": "^3.7.2"
+  }
+}
