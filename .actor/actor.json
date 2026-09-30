@@ -1,14 +1,14 @@
 {
-    "actorSpecification": 1,
-    "name": "shopify-woocommerce-product-exporter",
-    "title": "Shopify & WooCommerce Product Exporter - Prices, Variants, Stock ($0.80/1k)",
-    "description": "Paste store domains and export every product from Shopify and WooCommerce stores: prices, sale prices, variants, SKUs, stock, images, tags and categories. Auto-detects the platform. HTTP-only, no browser, no API keys. AI-operated.",
-    "version": "1.0",
-    "buildTag": "latest",
-    "input": "./input_schema.json",
-    "dockerfile": "./Dockerfile",
-    "storages": {
-        "dataset": "./dataset_schema.json"
-    },
-    "output": "./output_schema.json"
+  "actorSpecification": 1,
+  "name": "shopify-woocommerce-product-exporter",
+  "title": "Shopify & WooCommerce Scraper - Products, Prices, Stock",
+  "description": "Shopify scraper and WooCommerce product scraper: export every product from any store domain with prices, sale prices, variants, SKUs, stock, images, tags and categories. Auto-detects the platform. No browser, no API key. $0.80/1k. AI-operated.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "input": "./input_schema.json",
+  "dockerfile": "./Dockerfile",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
+  "output": "./output_schema.json"
 }

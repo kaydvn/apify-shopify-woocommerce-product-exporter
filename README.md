@@ -1,4 +1,4 @@
-# Shopify & WooCommerce Product Exporter: full catalogs with prices, variants and stock
+# Shopify & WooCommerce Scraper - Products, Prices, Stock
 
 Paste a list of store domains and get **every product** as a clean, CSV-ready row: title, price, sale price, currency, stock, variants, SKUs, barcodes, images, vendor, tags and categories. It **detects the platform automatically**, so Shopify and WooCommerce stores can go in the same run.
 
