@@ -66,6 +66,32 @@ Paste a list of store domains and get **every product** as a clean, CSV-ready ro
 ```
 WooCommerce rows also carry `categories`, `averageRating` and `reviewCount`. A per-store summary (platform, product count, errors) is saved in the key-value store as `STORES_SUMMARY`.
 
+## Sample inputs
+**First 100 products of one store**
+```json
+{"stores":["allbirds.com"],"maxProductsPerStore":100}
+```
+**Sale items in stock only, several stores**
+```json
+{"stores":["allbirds.com","gymshark.com"],"onlyOnSale":true,"onlyAvailable":true}
+```
+**Keyword search, no variants, short descriptions**
+```json
+{"stores":["allbirds.com"],"keyword":"wool","includeVariants":false,"descriptionMaxLength":200}
+```
+
+## Price guide
+Pay per event: $0.0008 per product. Rough cost by volume:
+
+| products | Cost |
+|---|---|
+| 100 | $0.08 |
+| 1,000 | $0.80 |
+| 10,000 | $8.00 |
+| 100,000 | $80.00 |
+
+The Apify free plan includes monthly credit, enough to try it. Set a maximum charge per run in the run options to cap spend.
+
 ## FAQ
 **How much does it cost?** $0.80 per 1,000 exported products. You can try it with the free monthly credit of the Apify free plan. Set `maxProductsPerStore` or a maximum charge per run to cap spend.
 
