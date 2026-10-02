@@ -62,6 +62,7 @@ Paste a list of store domains and get **every product** as a clean, CSV-ready ro
   "variantCount": 12,
   "skus": ["WR-M-9", "WR-M-10"],
   "imageUrl": "https://cdn.shopify.com/....jpg",
+  "images": ["https://cdn.shopify.com/....jpg"],
   "description": "Plain-text description...",
   "variants": [{ "variantId": 1, "title": "9", "sku": "WR-M-9", "barcode": null, "price": 98, "compareAtPrice": 120, "available": true, "options": ["9"] }]
 }
@@ -82,8 +83,8 @@ WooCommerce rows also carry `categories`, `averageRating` and `reviewCount`. A p
 {"stores":["allbirds.com"],"keyword":"wool","includeVariants":false,"descriptionMaxLength":200}
 ```
 
-## Price guide
-Pay per event: $0.0008 per product. Rough cost by volume:
+## Pricing
+Pay per event: the `product` event costs $0.0008 per product exported (that is $0.80 per 1,000 products). Filtered-out products and failed stores are not charged. Rough cost by volume:
 
 | products | Cost |
 |---|---|
