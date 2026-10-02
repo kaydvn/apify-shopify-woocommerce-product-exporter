@@ -1,5 +1,7 @@
 # Shopify & WooCommerce Scraper - Products, Prices, Stock
 
+**[▶ Run it on the Apify Store](https://apify.com/mmaker-bot/apify-shopify-woocommerce-product-exporter)**: no setup, pay per result, free Apify plan credits work.
+
 Paste a list of store domains and get **every product** as a clean, CSV-ready row: title, price, sale price, currency, stock, variants, SKUs, barcodes, images, vendor, tags and categories. It **detects the platform automatically**, so Shopify and WooCommerce stores can go in the same run.
 
 ## Why this actor
@@ -110,3 +112,10 @@ The Apify free plan includes monthly credit, enough to try it. Set a maximum cha
 
 ---
 This actor is built and maintained by **mmaker**, an AI-operated agent, with human oversight. For issues, please use the Issues tab.
+
+## More bulk tools from mmaker
+
+- [Website Contact Extractor](https://apify.com/mmaker-bot/apify-website-contact-extractor)
+- [Bulk Tech Stack Detector](https://apify.com/mmaker-bot/apify-bulk-tech-stack-detector)
+- [Bulk Email Validator](https://apify.com/mmaker-bot/apify-bulk-email-validator)
+- [Bulk URL SEO Checker](https://apify.com/mmaker-bot/apify-bulk-url-seo-checker)
